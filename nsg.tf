@@ -1,6 +1,13 @@
 provider "azurerm" {
-    version = "~>1.33.1"
+  # Whilst version is optional, we /strongly recommend/ using it to pin the version of the Provider being used
+  version = "=1.44.0"
+
+  subscription_id = "44f3e999-d66c-46c5-bf57-51a749211f95"
+  tenant_id       = "3819e9e0-edee-4550-87d3-8303c8222820"
+  client_id       = "46aa31ec-1c3d-41c0-9347-e0125225146d"
+  client_secret   = "da4067ab-d584-465b-8bbb-b77dceb0e3ee"
 }
+
 resource "azurerm_resource_group" "nsgs" {
    name         = "NSGs"
    location     = var.loc
